@@ -1,0 +1,2 @@
+class UndefinedMockBehaviorError(Exception):
+    pass
