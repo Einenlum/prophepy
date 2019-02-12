@@ -18,3 +18,7 @@ displayer.display_add(2, 3)
 
 calculator.check_prophecies()
 ```
+
+## Tests
+
+`python -m unittest tests/test.py`

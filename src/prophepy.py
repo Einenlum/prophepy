@@ -1,4 +1,4 @@
-from .exceptions import UndefinedMockBehaviorError
+from .exceptions import UndefinedMockBehaviorError, MethodWasNotCalledError
 
 def prophesize(cls):
     '''
@@ -112,7 +112,7 @@ def prophesize(cls):
             '''
             for prophecy in self.__mock_object._prophecies_to_call:
                 if prophecy.called_times == 0:
-                    raise Exception(f"Method {str(prophecy)} should have been called but was not.")
+                    raise MethodWasNotCalledError(f"Method {str(prophecy)} should have been called but was not.")
 
         def _reveal(self):
             '''
