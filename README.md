@@ -7,7 +7,7 @@ Mocks made easy in your python tests. Heavily inspired by the great PHP's [Proph
 ```python
 from examples.calculator import Calculator
 from examples.displayer import Displayer
-from src.prophepy import prophesize
+from prophepy import prophesize
 
 calculator = prophesize(Calculator)
 displayer = Displayer(calculator._reveal())
