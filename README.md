@@ -1,6 +1,7 @@
 # Prophepy
 
-Mocks made easy in your python tests. Heavily inspired by the great PHP's [Prophecy](https://github.com/phpspec/prophecy).
+Python mocks made for humans.
+Heavily inspired by the great PHP's [Prophecy](https://github.com/phpspec/prophecy).
 
 ## Usage
 
