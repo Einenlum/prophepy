@@ -20,6 +20,10 @@ displayer.display_add(2, 3)
 calculator.check_prophecies()
 ```
 
+## Install
+
+`pip install prophepy`
+
 ## Tests
 
 `python -m unittest tests/test.py`
