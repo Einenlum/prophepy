@@ -22,6 +22,7 @@ setup(
         "Programming Language :: Python :: 3.7",
     ],
     packages=["prophepy"],
+    package_dir={'prophepy': 'prophepy'},
     include_package_data=True,
     install_requires=[]
 )

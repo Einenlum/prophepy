@@ -1,7 +1,7 @@
 from unittest import TestCase
 from .example_classes import Calculator, Displayer
-from src.exceptions import MethodWasNotCalledError, UndefinedMockBehaviorError
-from src.prophepy import prophesize
+from prophepy.exceptions import MethodWasNotCalledError, UndefinedMockBehaviorError
+from prophepy import prophesize
 
 class TestMocking(TestCase):
     def test_specify_behavior(self):
