@@ -140,4 +140,4 @@ def prophesize(cls):
             return wrapper
         pass
 
-    return Mock()
+    return Mock(MockedObject)
