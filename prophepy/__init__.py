@@ -1,3 +1,4 @@
+from importlib import import_module
 from .exceptions import UndefinedMockBehaviorError, MethodWasNotCalledError
 
 class AttributeProphecy:
@@ -141,3 +142,16 @@ def prophesize(cls):
         pass
 
     return Mock(MockedObject)
+
+class InternalProphesizer:
+    def __init__(self, name, value, **kwargs):
+        self.from_module = kwargs['from_module']
+        self.name = name
+        self.value = value
+
+        self.module = import_module(self.from_module)
+        self.original_value = getattr(self.module, self.name)
+        setattr(self.module, self.name, self.value)
+
+    def leave_clean(self):
+        setattr(self.module, self.name, self.original_value)
